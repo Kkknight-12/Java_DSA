@@ -2,7 +2,10 @@ package LakshayaSirquestions.Easy;
 
 import java.util.Scanner;
 
-/*  https://www.hackerrank.com/contests/mock-icpc-august/challenges/boston-numbers/problem */
+/*  https://www.hackerrank.com/contests/mock-icpc-august/challenges/boston-numbers/problem
+ *
+ * https://www.hackerrank.com/contests/mock-icpc-august/challenges/boston-numbers/forum
+ * */
 public class BostonNumberHackerRank {
     public static void main(String[] args) {
         // TODO Auto-generated method stub

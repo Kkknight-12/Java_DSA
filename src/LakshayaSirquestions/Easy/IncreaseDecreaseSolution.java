@@ -30,7 +30,7 @@ public class IncreaseDecreaseSolution {
                 return;
             }
             // take the difference of current and next number and store it in
-            // A array
+            // An array
             A[i] = a[i] - a[i + 1];
         } // for loop ends
 

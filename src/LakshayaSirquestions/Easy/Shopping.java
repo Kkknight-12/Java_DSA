@@ -30,7 +30,6 @@ public class Shopping {
         while ( incrementer < numOfSampleInp ) {
             int ayushCartlimit = ayusharr.get(incrementer);
             int hasrshCartlimit = harsharr.get(incrementer);
-            int something = 1000000;
 
             int ayushinc = 0;
             int ayushCart = 0;

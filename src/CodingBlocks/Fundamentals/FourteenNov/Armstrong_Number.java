@@ -1,4 +1,4 @@
-package CodingBlocks.Fundamentals.TwelveNov;
+package CodingBlocks.Fundamentals.FourteenNov;
 
 /*
 * armstrong number → number whose sum of digit ^ number of digit is same number itself

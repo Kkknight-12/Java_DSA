@@ -13,7 +13,7 @@ public class Rot_4 {
         // we take backup of num
         int back_up = num;
 
-        // while will help us count the number of digits
+        // while loop will count the number of digits
         while ( num > 0 ) {
             num = num / 10;
             numofdigits++;

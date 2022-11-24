@@ -14,7 +14,7 @@ public class Arrays_demo_5 {
         swap(a1[0], a2[0]);
         System.out.println(a1[0] + ":" + a2[0]); // 1 : 22
 
-        // same applies to array swaping logic
+        // same applies to array swapping logic
         /*  a dn b are local variable in swap_arr function
          * so when the function is popped from stack, changes made don't
          * affect real array*/

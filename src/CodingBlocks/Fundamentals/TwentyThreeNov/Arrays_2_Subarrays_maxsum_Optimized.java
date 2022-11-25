@@ -3,11 +3,15 @@ package CodingBlocks.Fundamentals.TwentyThreeNov;
 public class Arrays_2_Subarrays_maxsum_Optimized {
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40, 50};
-        PrintAll(arr);
+//        PrintAll(arr);
+//        System.out.println();
+//        PrintAll2(arr);
+//        System.out.println();
+//        PrintAll3(arr);
+        //
+        int[] arr2 = {-10, -20, -30, -5000, -500, -600, -20};
         System.out.println();
-        PrintAll2(arr);
-        System.out.println();
-        PrintAll3(arr);
+        PrintAll3(arr2);
     }
 
     //    quadratic
@@ -60,21 +64,24 @@ public class Arrays_2_Subarrays_maxsum_Optimized {
     }
 
     // Linear
-    /* Kadane's Algorithm for Maximum Sum Subarray
-    * -> keep on adding the elements till the sum become zero or less
-    * -> if the sum become zero or less then start addition from next element
-    *  in array*/
+    /* Kadane's Algorithm for Maximum Sum Sub array
+     * -> keep on adding the elements till the sum become zero or less
+     * -> if the sum become zero or less than start addition from next element
+     *  in array*/
     static void PrintAll3(int[] arr) {
 
         int sum = 0;
-        int ans = 0;
+        int ans = Integer.MIN_VALUE; // -2147483648
+
         for ( int ele : arr ) {
             sum = sum + ele;
+            ans = Math.max(sum, ans);
+
             if ( sum < 0 ) {
                 sum = 0;
             }
-            ans = Math.max(sum, ans);
-        }
+
+        } // for loop ends
         System.out.println("Kadane algo -> " + ans);
     }
 }

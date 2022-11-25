@@ -2,7 +2,7 @@ package CodingBlocks.Fundamentals.TwentyThreeNov;
 
 public class Arrays_2_Subarrays_maxsum {
     public static void main(String[] args) {
-        int[] arr = {10, 20, 30, 40, 50};
+        int[] arr = {10, 20, -35, 40, 50};
         PrintAll(arr);
     }
 

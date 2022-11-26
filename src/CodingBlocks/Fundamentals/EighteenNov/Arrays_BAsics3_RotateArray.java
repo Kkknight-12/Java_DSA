@@ -25,10 +25,21 @@ public class Arrays_BAsics3_RotateArray {
 
         for ( int count = 0; count <= rot; count++ ) {
             // 1 rotation logic
-            int temp = arr[arr.length - 1];
+            int temp = arr[arr.length - 1]; // store last variable in array
+            // 50
+
+            // starting from the second last index of array we iterate
+            // we place the last element at second last element
+            // {10, 20, 30, 40, 50} => {10, 20, 30, 40, 40}; // i = 3
+            // {10, 20, 30, 40, 50} => {10, 20, 30, 30, 40}; // i = 2
+            // {10, 20, 30, 40, 50} => {10, 20, 20, 30, 40}; // i = 1
+            // {10, 20, 30, 40, 50} => {10, 10, 20, 30, 40}; // i = 0
             for ( int i = arr.length - 2; i >= 0; i-- ) {
                 arr[i + 1] = arr[i];
             }
+
+            // temp = 50
+            // {10, 10, 20, 30, 40} => {50, 10, 20, 30, 40};
             arr[0] = temp;
         }
     }

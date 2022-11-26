@@ -7,7 +7,7 @@ public class Arrays_2_Subarrays_maxsum_Optimized {
 //        System.out.println();
 //        PrintAll2(arr);
 //        System.out.println();
-//        PrintAll3(arr);
+        PrintAll3(arr);
         //
         int[] arr2 = {-10, -20, -30, -5000, -500, -600, -20};
         System.out.println();

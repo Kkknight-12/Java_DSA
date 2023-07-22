@@ -8,7 +8,7 @@ import java.util.Scanner;
  * first letter capital -> sout - Upper
  * first letter small -> sout - Lower
  */
-public class lower_upper_02 {
+public class check_lower_upper_case_02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -21,7 +21,7 @@ public class lower_upper_02 {
         // Use single quotes for literal chars,
         // double quotes for literal Strings
 
-        /* i do not understand how it is comparing character with 'A' and 'Z" */
+       
         if ( ch >= 'A' && ch <= 'Z' ) {
             System.out.println("Upper");
         } else if ( ch >= 'a' && ch <= 'z' ) {

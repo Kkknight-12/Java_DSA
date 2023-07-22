@@ -9,20 +9,18 @@ package CodingBlocks.Fundamentals.Novermber.ElevenNov;
 public class FarenheitToCelcius {
     public static void main(String[] args) {
 
-        int minF = 0;
-        int maxF = 100;
+        int min = 0;
+        int max = 100;
         int step = 20;
 
-        for ( int F = minF; F <= maxF; F = F + step ) {
-            System.out.println(F + "\t" + FarenheitToCelciusConversion(F));
-//            System.out.println((F - 32) * 5 / 9);
+        for ( int i = min; i <= max; i = i + step ) {
+            System.out.println(i + "\t" + FarenheitToCelciusConversion(i));
         }
     }
 
     public static int FarenheitToCelciusConversion(int f) {
-//        int c = ((f - 32) * 5) / 9;
-        int c = ( int ) (5 / 9.0 * (f - 32));
-        return c;
+//        return ((f - 32) * 5) / 9;
+        return ( int ) (5 / 9.0 * (f - 32));
     }
 }
 

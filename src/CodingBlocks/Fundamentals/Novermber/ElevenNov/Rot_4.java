@@ -38,3 +38,28 @@ public class Rot_4 {
         }
     }
 }
+
+/*
+* public static void main(String[] args) {
+
+        int number = 12345;
+        int rotation = 5;
+        //  % 10 - to get last digit -> 5 ->     1234 | 5
+        // /10 - to get first part of digit -> 1234 ->   1234 | 5
+
+        for ( int i = 0; i < rotation; i++ ) {
+            // remove last digit;
+            int lastDigit = number % 10;
+
+            // remove first part;
+            int remainingPart = number / 10;
+            number = remainingPart;
+
+//            System.out.println("last " + lastDigit);
+//            System.out.println("rem " + remainingPart);
+
+            number = (10000 * lastDigit) + remainingPart;
+            System.out.println(number);
+        }
+    }
+* */

@@ -1,6 +1,6 @@
 package CodingBlocks.Fundamentals.Novermber.FourteenNov;
 
-public class Function_demo {
+public class Function_demo_2 {
     public static void main(String[] args) {
         fn();
 
@@ -13,7 +13,7 @@ public class Function_demo {
     /*  for now we will write all methods with public static
      * void -> return nothing
      * in parenthesis ( arguments : data type, .....) */
-    public static void fn() {
+    public static void fn( ) {
         System.out.println("fn called"); // fn called
     }
 

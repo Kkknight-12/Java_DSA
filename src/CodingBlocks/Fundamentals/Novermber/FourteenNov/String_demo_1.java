@@ -1,6 +1,6 @@
 package CodingBlocks.Fundamentals.Novermber.FourteenNov;
 
-public class String_demo {
+public class String_demo_1 {
     public static void main(String[] args) {
 
         /*

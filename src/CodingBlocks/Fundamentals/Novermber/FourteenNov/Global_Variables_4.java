@@ -1,9 +1,11 @@
 package CodingBlocks.Fundamentals.Novermber.FourteenNov;
 
-public class Global_Variables {
+public class Global_Variables_4 {
 
     // space to global variable is allotted in heap
     // first memory is allocated to static global variable
+
+    // global variable
     static int var = 100;
 
     // then memory is allocated to main method
@@ -12,11 +14,11 @@ public class Global_Variables {
     }
 
     public static void fun(int a) {
-        int val = 20;
         // local variable
+        int val = 20;
         System.out.println(val); // 20
-        // global variable
-        System.out.println(Global_Variables.var); // 100
+
+        System.out.println(Global_Variables_4.var); // 100
     }
 
 

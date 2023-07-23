@@ -13,6 +13,9 @@ public class Arrays_demo_2 {
         }
 
         // print value
+//        for ( int j : arr2 ) {
+//            System.out.print(j + " ");
+//        }
         for ( int i = 0; i < arr2.length; i++ ) {
             System.out.print(arr2[i] + " ");
         }

@@ -1,6 +1,6 @@
 package CodingBlocks.Fundamentals.Novermber.SixteenNov;
 
-public class Arrays_demo_3 {
+public class enhanced_loop_3 {
     public static void main(String[] args) {
         int arr2[] = new int[5];
         for ( int i = 0; i < arr2.length; i++ ) {

@@ -7,8 +7,6 @@ public class Arrays_demo_1 {
 
         // we get address
         System.out.println(arr); // [I@5acf9800
-
-
         System.out.println(arr.length); // 5
 
         // indexing
@@ -35,5 +33,7 @@ public class Arrays_demo_1 {
             assign_value = assign_value + 2;
             System.out.println(arr[i]);
         }
+        System.out.println("");
+        System.out.println(arr[0]);
     }
 }

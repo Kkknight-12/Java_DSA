@@ -2,7 +2,7 @@ package CodingBlocks.Fundamentals.Novermber.TwentyThreeNov;
 
 public class Arrays_2_Subarrays {
     public static void main(String[] args) {
-        int[] arr = {10, 20, 30, 40, 50};
+        int[] arr = { 10, 20, 30, 40, 50 };
         PrintAll(arr);
     }
 
@@ -35,6 +35,18 @@ public class Arrays_2_Subarrays {
             System.out.println();
 
         } // first loop ends here
+
+
+        // loop iteration to understand when which loop will run
+//        for ( int i = 0; i < arr.length; i++ ) {
+//            System.out.print("i " + i);
+//            System.out.println();
+//            for ( int j = i; j < arr.length; j++ ) {
+//                System.out.print("j " + j);
+//                System.out.println();
+//            }
+//            System.out.println("cycle complete");
+//        }
 
     }
 }

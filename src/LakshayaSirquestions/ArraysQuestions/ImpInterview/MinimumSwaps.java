@@ -4,10 +4,20 @@ import java.util.*;
 
 public class MinimumSwaps {
     public static void main(String[] args) {
-        int[] arr = {3, 1, 2, 4};
-        minSwaps(arr);
+
+//        Scanner sc = new Scanner(System.in);
+//        int[] arr = new int[sc.nextInt()];
+//        for ( int i = 0; i < arr.length; i++ ) {
+//            arr[i] = sc.nextInt();
+//        }
+//        int[] arr = { 3, 1, 2, 4 };
+//        int[] arr = { 4, 3, 1, 2 };
+        int[] arr = { 2, 8, 5, 4 };
+//        minSwaps(arr);
 //        int result = minimumSwaps(arr);
 //        System.out.println(result);
+
+        System.out.println(minSwaps2(arr));
     }
 
     static void minSwaps(int[] arr) {
@@ -48,29 +58,85 @@ public class MinimumSwaps {
 
     }
 
-//    public static int minimumSwaps(int[] a) {
-//        HashMap<Integer, Integer> m = new HashMap<Integer,
-//            Integer>();
-//
-//        int[] copy = new int[a.length];
-//        for ( int i = 0; i < a.length; i++ ) {
-//            copy[i] = a[i];
-//        }
-//        Arrays.sort(copy);
-//        for ( int i = 0; i < a.length; i++ ) {
-//            m.put(copy[i], i + 1);
-//        }
-//        System.out.println("M" + m);
-//        int moves = 0;
-//        for ( int i = 0; i < a.length; i++ ) {
-//            if ( (i + 1) != ( int ) m.get(a[i]) ) {
-//                int temp = a[i];
-//                int pos = m.get(a[i]) - 1;
-//                a[i] = a[pos];
-//                a[pos] = temp;
-//                moves++;
-//            }
-//        }
-//        return moves;
-//    }
+    public static int minSwaps2(int[] arr) {
+        int[] sortedArr = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(sortedArr);
+
+        System.out.println("O Array " + Arrays.toString(arr));
+        System.out.println("S Array " + Arrays.toString(sortedArr));
+
+        int n = arr.length;
+        int swapCount = 0;
+
+        HashMap<Integer, Integer> numsMap = new HashMap<>();
+
+        for ( int i = 0; i < n; i++ ) numsMap.put(arr[i], i);
+        System.out.println(numsMap);
+
+
+        for ( int i = 0; i < n; i++ ) {
+            if ( arr[i] != sortedArr[i] ) {
+                // take the element from sorted array
+                // which is on the iterator position
+                int targetNum = sortedArr[i];
+
+                // take its old position ( original A ) from map
+                int targetNumIndex = numsMap.get(targetNum);
+//                System.out.println("targetNum " + targetNum); // 4
+//                System.out.println("targetNumIndex " + targetNumIndex); // 3
+
+//                System.out.println("check " + (arr[targetNumIndex] ==
+//                targetNum)); // true
+
+                // now in map we take element which is at current index in
+                // Sorted Array and change its value to current iterator
+                // we also take element which is at the current iterator in
+                // Original Array and change its value in map to old position
+                // ( Original Array ) of element which is at the current
+                // iterator position in Sorted Array
+                numsMap.put(arr[targetNumIndex], i);
+                numsMap.put(arr[i], targetNumIndex);
+
+                int temp = arr[i];
+                arr[i] = arr[targetNumIndex];
+                arr[targetNumIndex] = temp;
+                System.out.println(numsMap);
+
+                swapCount++;
+            }
+        }
+
+        return swapCount;
+    }
+
 }
+
+/*
+ * minSwaps2:
+ * 1. Create a copy of the original array, sort it and store it in sortedArr.
+ *
+ * 2. Create a HashMap, numsMap, to store the index of each element in the
+ * original array.
+ *
+ * 3. Iterate through the original array and for each element, check if it is in
+ * the correct position (i.e. equal to its corresponding element in the
+ * sortedArr).
+ *
+ * 4. If the element is not in the correct position, find the index of the
+ * correct element in the original array using the numsMap.
+ *
+ * 5. Swap the current element and the correct element in the original array.
+ *
+ * 6. Update the numsMap to reflect the new positions of the elements.
+ *
+ * 7. Increase the swapCount by 1.
+ *
+ * 8. Repeat steps 3-7 for all elements in the original array.
+ *
+ * 9. Return the swapCount as the minimum number of swaps required to sort the
+ * original array.
+ *
+ * The time complexity of this algorithm is O(nlogn) as it sorts the array
+ * first which takes O(nlogn) time and then it iterates the array and
+ * performs a constant time operation for every element, which takes O(n) time.
+ *  */

@@ -2,10 +2,11 @@ package CodingBlocks.Fundamentals.Novermber.EighteenNov;
 
 public class Arrays_Basics1 {
     public static void main(String[] args) {
-        int[] arr = {10, 2, 13, 9, 200, 3, -14};
+        int[] arr = { 10, 2, 13, 9, 200, 93, -14 };
 
         int result = Max(arr); // sabse bada aam hoga -> 200;
         System.out.println(result);
+        System.out.println(FindIndexOfMax(arr));
     }
 
     public static int Max(int[] boori) {
@@ -23,9 +24,19 @@ public class Arrays_Basics1 {
                 jeb = aam;
             }
         }
-
         return jeb;
     }
 
+    static int FindIndexOfMax(int[] arr) {
 
+        int max = 0;
+        int maxIndex = -1;
+        for ( int i = 0; i < arr.length; i++ ) {
+            if ( max < arr[i] ) {
+                max = arr[i];
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
+    }
 }

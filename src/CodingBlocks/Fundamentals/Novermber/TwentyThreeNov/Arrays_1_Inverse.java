@@ -1,5 +1,7 @@
 package CodingBlocks.Fundamentals.Novermber.TwentyThreeNov;
 
+import java.util.Arrays;
+
 /*
  * arr   -> 2, 4, 3, 1, 0
  * index -> 0, 1, 2, 3, 4
@@ -9,18 +11,17 @@ package CodingBlocks.Fundamentals.Novermber.TwentyThreeNov;
  * index -> 0, 1, 2, 3, 4*/
 public class Arrays_1_Inverse {
     public static void main(String[] args) {
-        int[] arr = {2, 4, 3, 1, 0};
+        int[] arr = { 2, 4, 3, 1, 0 };
 
-        inverse(arr);
+        System.out.println(Arrays.toString(inverse(arr)));
     }
 
     static int[] inverse(int[] arr) {
+        int[] newArr = new int[arr.length];
 
         for ( int i = 0; i < arr.length; i++ ) {
-            int temp = arr[i];
-//            arr[temp] = arr[]
-//            arr[i] = arr[temp]
+            newArr[arr[i]] = i;
         }
-        return arr;
+        return newArr;
     }
 }

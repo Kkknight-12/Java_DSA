@@ -2,16 +2,16 @@ package CodingBlocks.Fundamentals.Novermber.TwentyThreeNov;
 
 public class Arrays_2_Subarrays_maxsum_Optimized {
     public static void main(String[] args) {
-        int[] arr = {10, 20, 30, 40, 50};
+        int[] arr = { 10, 20, 30, 40, 50 };
 //        PrintAll(arr);
 //        System.out.println();
 //        PrintAll2(arr);
 //        System.out.println();
         PrintAll3(arr);
         //
-        int[] arr2 = {-10, -20, -30, -5000, -500, -600, -20};
-        System.out.println();
-        PrintAll3(arr2);
+//        int[] arr2 = {-10, -20, -30, -5000, -500, -600, -20};
+//        System.out.println();
+//        PrintAll3(arr2);
     }
 
     //    quadratic
@@ -33,15 +33,13 @@ public class Arrays_2_Subarrays_maxsum_Optimized {
 
 //        ans must be accessible outside the first loop
         int ans = Integer.MIN_VALUE;
-
         for ( int starting = 0; starting < arr.length; starting++ ) {
             int sum = 0;
-
-//            each ending element will be new addition to the existing array sum
+//            each ending element will be
+//            new addition to the existing array sum
             for ( int ending = starting; ending < arr.length; ending++ ) {
-
-//                 we will be adding the ending element to the existing array
-//                 sum
+//                 we will be adding the ending element to
+//                 the existing array sum
                 sum = sum + arr[ending];
                 if ( sum < 0 ) {
                     sum = 0;
@@ -58,7 +56,6 @@ public class Arrays_2_Subarrays_maxsum_Optimized {
             System.out.println();
 
         } // first loop ends
-
 //        will be printed once when the first loop | sub arrays iteration stops
         System.out.println(ans);
     }
@@ -67,7 +64,9 @@ public class Arrays_2_Subarrays_maxsum_Optimized {
     /* Kadane's Algorithm for Maximum Sum Sub array
      * -> keep on adding the elements till the sum become zero or less
      * -> if the sum become zero or less than start addition from next element
-     *  in array*/
+     *  in array
+     * -> maintain a variable to store the last max sum before the sum became
+     *  negative*/
     static void PrintAll3(int[] arr) {
 
         int sum = 0;
@@ -82,6 +81,7 @@ public class Arrays_2_Subarrays_maxsum_Optimized {
             }
 
         } // for loop ends
+        System.out.println("sum -> " + sum);
         System.out.println("Kadane algo -> " + ans);
     }
 }

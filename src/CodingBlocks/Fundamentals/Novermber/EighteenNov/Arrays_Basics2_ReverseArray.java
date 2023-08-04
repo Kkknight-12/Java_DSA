@@ -4,6 +4,27 @@ import java.util.Arrays;
 
 public class Arrays_Basics2_ReverseArray {
     public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40 };
+        reverseArray(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    static void reverseArray(int[] arr) {
+        int left_pointer = 0;
+        int right_pointer = arr.length - 1;
+
+        while ( left_pointer < right_pointer ) {
+            int temp = arr[left_pointer];
+            arr[left_pointer] = arr[right_pointer];
+            arr[right_pointer] = temp;
+            left_pointer++;
+            right_pointer--;
+        }
+    }
+}
+
+/*
+*  public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40};
 
         System.out.println(Arrays.toString(arr));
@@ -31,4 +52,4 @@ public class Arrays_Basics2_ReverseArray {
             R--;
         }
     }
-}
+    *  */

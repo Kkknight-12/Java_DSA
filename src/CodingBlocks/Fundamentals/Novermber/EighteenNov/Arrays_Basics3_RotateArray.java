@@ -10,10 +10,10 @@ import java.util.Arrays;
  * rotation 3 -> 30, 40, 50, 10, 20
  * rotation 4 -> 20, 30, 40, 50, 10
  * rotation 5 -> 10, 20, 30, 40, 50  */
-public class Arrays_BAsics3_RotateArray {
+public class Arrays_Basics3_RotateArray {
     public static void main(String[] args) {
 
-        int[] arr = {10, 20, 30, 40, 50};
+        int[] arr = { 10, 20, 30, 40, 50 };
 
         System.out.println(Arrays.toString(arr));
         RotateArray(arr, 0);
@@ -25,7 +25,8 @@ public class Arrays_BAsics3_RotateArray {
 
         for ( int count = 0; count <= rot; count++ ) {
             // 1 rotation logic
-            int temp = arr[arr.length - 1]; // store last variable in array
+            int last_element = arr[arr.length - 1]; // store last variable in
+            // array
             // 50
 
             // starting from the second last index of array we iterate
@@ -38,9 +39,9 @@ public class Arrays_BAsics3_RotateArray {
                 arr[i + 1] = arr[i];
             }
 
-            // temp = 50
+            // last_element = 50
             // {10, 10, 20, 30, 40} => {50, 10, 20, 30, 40};
-            arr[0] = temp;
+            arr[0] = last_element;
         }
     }
 }

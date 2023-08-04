@@ -47,8 +47,40 @@ import java.util.Arrays;
  * */
 public class Arrays_Basics3_RotateArray_Optimized {
     public static void main(String[] args) {
+        int arr[] = { 10, 20, 30, 40, 50 };
+        int rotate = 3;
 
-        int[] arr = {10, 20, 30, 40, 50};
+        Rotate_Array(arr, rotate);
+    }
+
+    static void Rotate_Array(int[] arr, int rot) {
+        rot = rot % arr.length;
+        System.out.println(Arrays.toString(Reverse_Array(arr, 0,
+            arr.length - 1)));
+
+        System.out.println(Arrays.toString(Reverse_Array(arr, 0, rot - 1)));
+
+        System.out.println(Arrays.toString(Reverse_Array(arr, rot,
+            arr.length - 1)));
+    }
+
+    static int[] Reverse_Array(int[] arr, int l, int r) {
+
+        while ( l < r ) {
+            int temp = arr[l];
+            arr[l] = arr[r];
+            arr[r] = temp;
+            l++;
+            r--;
+        }
+        return arr;
+    }
+}
+
+/*
+*  public static void main(String[] args) {
+
+        int[] arr = { 10, 20, 30, 40, 50 };
 
         System.out.println("Original Array " + Arrays.toString(arr));
 
@@ -58,6 +90,7 @@ public class Arrays_Basics3_RotateArray_Optimized {
 
     public static void RotateArray(int[] arr, int rot) {
         rot = rot % arr.length;
+        System.out.println("rot " + rot);
 
         // step 1: Reverse whole array
         ReverseArr(arr, 0, arr.length - 1);
@@ -82,4 +115,4 @@ public class Arrays_Basics3_RotateArray_Optimized {
             R--;
         }
     }
-}
+    * */

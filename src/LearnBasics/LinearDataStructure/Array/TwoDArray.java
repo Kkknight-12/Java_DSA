@@ -33,11 +33,11 @@ public class TwoDArray {
         System.out.println("----------------");
 
         // ADDING ELEMENTS To 2D ARRAY
-        for ( int i = 0; i < rows; i++ ) {
-            for ( int j = 0; j < columns; j++ ) {
+        for ( int i = 0; i < rows; i++ ) { // i is used to iterate over the rows of the array,
+            for ( int j = 0; j < columns; j++ ) { // j is used to iterate over the columns of each row
                 my2DArray[i][j] = i + j;
                 // print -> line will not change, next element will be printed next to last.
-                System.out.print(my2DArray[i][j]);
+                System.out.print(my2DArray[i][j] + " ");
             }
             // create a line break
             System.out.println();
@@ -59,8 +59,8 @@ public class TwoDArray {
         // length of row and column
         int rowLen = my2DArray.length;
         int coLen = my2DArray[0].length;
-        System.out.println(coLen);
-        System.out.println(rowLen);
+        System.out.println("row Len " + rowLen); // 3
+        System.out.println("col len " + coLen); // 4
     }
 }
 

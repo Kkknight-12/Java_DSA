@@ -1,4 +1,4 @@
-package LearnBasics.LinearDataStructure.Array;
+package LearnBasics.LinearDataStructure.Array.TwoDArray;
 
 public class Print2DArrayColumnWise {
 

@@ -1,4 +1,4 @@
-package LearnBasics.LinearDataStructure.Array;
+package LearnBasics.LinearDataStructure.Array.TwoDArray;
 
 /* Two Dimensional Array is an array of references that holds references to other arrays.
  * These arrays are preferably used if you want to put together data items in a table or
@@ -15,6 +15,21 @@ package LearnBasics.LinearDataStructure.Array;
  * For example, if one array is declared of type int, then its pointer can’t point to the string type array.
  * Each element must be of the same data type.
  */
+
+
+/*
+ *       | Column 0  | Column 1  | Column 2  |
+ * ------------------------------------------
+ * Row 0 | x [0][0]  | x [0][1]  | x [0][2]  |
+ * ------------------------------------------
+ * Row 1 | x [1][0]  | x [1][1]  | x [1][2]  |
+ * ------------------------------------------
+ * Row 2 | x [2][0]  | x [2][1]  | x [2][2]  |
+ * ------------------------------------------
+ *
+ * arr [row][column]
+ *
+ * */
 
 import java.util.Arrays;
 

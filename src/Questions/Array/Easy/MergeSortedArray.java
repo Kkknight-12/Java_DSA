@@ -44,10 +44,10 @@ public class MergeSortedArray {
 
 /*
  *            pointerOfArrayOne  pointer
- *                       ↓        ↓
- * int arr1[]  =  {1, 2, 3, 0, 0, 0};
- * int arr2[] =   {2, 5, 6};
- *                       ↑
+ *                        ↓        ↓
+ * int arr1[]  =   {1, 2, 3, 0, 0, 0};
+ * int arr2[]  =   {2, 5, 6};
+ *                        ↑
  *            pointerOfArrayTwo
  *
  * -------------------------------------------
@@ -56,12 +56,12 @@ public class MergeSortedArray {
  * pointerOfArrayTwo at the position of pointer and decrement
  * pointerOfArrayTwo and pointer
  *
- *                       p1    p
- *                       ↓     ↓
- * int arr1[]  =  {1, 2, 3, 0, 0, 6};
- * int arr2[] =   {2, 5, 0};
- *                    ↑
- *                    p2
+ *                        p1    p
+ *                        ↓     ↓
+ * int arr1[]  =   {1, 2, 3, 0, 0, 6};
+ * int arr2[]  =   {2, 5, 0};
+ *                     ↑
+ *                     p2
  *
  * -------------------------------------------
  *
@@ -69,12 +69,12 @@ public class MergeSortedArray {
  * pointerOfArrayTwo at the position of pointer and decrement
  * pointerOfArrayTwo and pointer
  *
- *                       p1 p
- *                       ↓  ↓
- * int arr1[]  =  {1, 2, 3, 0, 5, 6};
- * int arr2[] =   {2, 0, 0};
- *                 ↑
- *                 p2
+ *                        p1 p
+ *                        ↓  ↓
+ * int arr1[]  =   {1, 2, 3, 0, 5, 6};
+ * int arr2[]  =   {2, 0, 0};
+ *                  ↑
+ *                  p2
  *
  * -------------------------------------------
  *
@@ -84,7 +84,7 @@ public class MergeSortedArray {
  *
  *                    p1 p
  *                    ↓  ↓
- * int arr1[]  =  {1, 2, 0, 3, 5, 6};
+ * int arr1[] =   {1, 2, 0, 3, 5, 6};
  * int arr2[] =   {2, 0, 0};
  *                 ↑
  *                 p2
@@ -97,7 +97,7 @@ public class MergeSortedArray {
  *
  *                 p1 p
  *                 ↓  ↓
- * int arr1[]  =  {1, 0, 2, 3, 5, 6};
+ * int arr1[] =   {1, 0, 2, 3, 5, 6};
  * int arr2[] =   {2, 0, 0};
  *                 ↑
  *                 p2
@@ -112,7 +112,7 @@ public class MergeSortedArray {
  *                 ↓
  *                 p1
  *                 ↓
- * int arr1[]  =  {1, 2, 2, 3, 5, 6};
+ * int arr1[] =   {1, 2, 2, 3, 5, 6};
  * int arr2[] =   {0, 0, 0};
  *              ↑
  *              p2

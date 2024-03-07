@@ -1,4 +1,4 @@
-package Questions.String.Easy;
+package Questions.String.Easy.Palindrome;
 
 
 /*

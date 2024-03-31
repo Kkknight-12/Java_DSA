@@ -4,6 +4,7 @@ package LearnBasics.LinearDataStructure.Array.Algorithm.BoyerMooreVotingAlgorith
 /*
  *
  * https://www.youtube.com/watch?v=nP_ns3uSh80
+ * https://leetcode.com/problems/majority-element/description/
  *
  *  */
 

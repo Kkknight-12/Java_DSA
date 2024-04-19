@@ -1,4 +1,4 @@
-package Questions.Array.Easy;
+package Questions.Array.Easy.FindNumberInArray;
 
 // https://www.geeksforgeeks.org/problems/find-the-smallest-and-second-smallest-element-in-an-array3226/1
 /*

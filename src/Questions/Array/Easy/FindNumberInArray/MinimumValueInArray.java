@@ -1,4 +1,4 @@
-package Questions.Array.Easy;
+package Questions.Array.Easy.FindNumberInArray;
 
 public class MinimumValueInArray {
     public static void main(String[] args) {

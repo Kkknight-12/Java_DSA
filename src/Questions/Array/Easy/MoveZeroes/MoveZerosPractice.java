@@ -82,6 +82,7 @@ public class MoveZerosPractice {
  * j++
  * loop ends
  *
+ * -----------------------------
  *  j
  *  i
  * {4, 8, 6, 0, 2, 0, 1, 15, 12, 0};
